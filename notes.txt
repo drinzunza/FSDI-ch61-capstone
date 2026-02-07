@@ -1,0 +1,33 @@
+
+
+# create the venv
+python3 -m venv venv
+
+
+# activate the venv
+win: venv\Scripts\activate
+mac: source venv/bin/activate
+
+# install django
+python3 -m pip install django whitenoise pillow
+
+# create a django project
+django-admin startproject config .
+
+# create an app
+python3 manage.py startapp pages  
+
+
+# setup the new app
+- register it on settings.py
+- create a urls.py file
+- register the urls on config>urls.py
+
+
+
+# django migrations
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+# create super user
+python3 manage.py createsuper

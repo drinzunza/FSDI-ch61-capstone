@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About me
+{% endblock %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="about">
+    <h3>About me</h3>
+    <h1>Sergio Inzunza</h1>
+
+    <div class="services">
+
+        <h3>Our Services</h3>
+
+        <div class="row">
+
+            <div class="service col-12 col-xl-3">
+                A
+            </div>
+
+            <div class="service col-12 col-xl-6">
+                B
+            </div>
+
+            <div class="service col-12 col-xl-3">
+                C
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="service col-12 col-xl-3">
+                X
+            </div>
+
+            <div class="service col-12 col-xl-6">
+                Y
+            </div>
+
+            <div class="service col-12 col-xl-3">
+                Z
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home page
+{% endblock %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<section class="home">
+    <div class="home-container">
+        <div class="home-hero">
+            <div class="home-hero-left">
+                <h1 class="home-title">Capture ideas. Organize thoughts. Find notes fast.</h1>
+                <p class="home-subtitle">A clean, focused note-taking app to save ideas, tasks, and research — all in
+                    one place.</p>
+                <div class="home-cta">
+                    <a href="{% url 'home' %}" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-plus me-2"></i>Create a post
+                    </a>
+                    <a href="{% url 'about' %}" class="btn btn-outline-secondary btn-lg">
+                        <i class="fa-solid fa-circle-info me-2"></i>Learn more
+                    </a>
+                </div>
+            </div>
+            <div class="home-hero-right">
+                <img class="top-img" src="{% static 'imgs/who.jpg' %}" alt="Notes app illustration">
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="feature-card-body">
+                    <div class="feature-header">
+                        <div class="feature-icon feature-icon-primary">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </div>
+                        <h5 class="feature-title">Fast capture</h5>
+                    </div>
+                    <p class="feature-text">Open and jot. Add checklists, ideas, or links in seconds without
+                        distractions.</p>
+                </div>
+            </article>
+            <article class="feature-card">
+                <div class="feature-card-body">
+                    <div class="feature-header">
+                        <div class="feature-icon feature-icon-success">
+                            <i class="fa-solid fa-folder-tree"></i>
+                        </div>
+                        <h5 class="feature-title">Stay organized</h5>
+                    </div>
+                    <p class="feature-text">Group notes by topics or tags, and keep everything neatly structured.</p>
+                </div>
+            </article>
+            <article class="feature-card">
+                <div class="feature-card-body">
+                    <div class="feature-header">
+                        <div class="feature-icon feature-icon-warning">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h5 class="feature-title">Search that works</h5>
+                    </div>
+                    <p class="feature-text">Find notes instantly with powerful search and clean, readable results.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}
