@@ -1,0 +1,282 @@
+[
+  {
+    "model": "store.category",
+    "pk": 1,
+    "fields": {
+      "name": "Laptops"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 2,
+    "fields": {
+      "name": "Monitors"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 3,
+    "fields": {
+      "name": "Keyboards & Mice"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 4,
+    "fields": {
+      "name": "Storage & Memory"
+    }
+  },
+  {
+    "model": "store.category",
+    "pk": 5,
+    "fields": {
+      "name": "Networking & Accessories"
+    }
+  },
+
+  {
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "DevBook Pro 14",
+      "description": "14-inch laptop with fast compile times and long battery life.",
+      "price": "1499.99",
+      "created_at": "2026-02-19T10:00:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "CodeStation 16",
+      "description": "16-inch workstation laptop for heavy IDE and container workloads.",
+      "price": "1899.00",
+      "created_at": "2026-02-19T10:01:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "LinuxLite 13",
+      "description": "Portable developer laptop with Linux-first hardware support.",
+      "price": "1099.50",
+      "created_at": "2026-02-19T10:02:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "BuildRunner X15",
+      "description": "High-core CPU laptop built for local CI and testing.",
+      "price": "1699.00",
+      "created_at": "2026-02-19T10:03:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+
+  {
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "UltraSharp 27 4K",
+      "description": "27-inch 4K IPS monitor ideal for code and design previews.",
+      "price": "499.00",
+      "created_at": "2026-02-19T10:04:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+      "category": 2,
+      "name": "WideView 34 Curved",
+      "description": "Ultrawide monitor for multitasking across editor, terminal, and docs.",
+      "price": "699.00",
+      "created_at": "2026-02-19T10:05:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+      "category": 2,
+      "name": "PixelAccurate 32",
+      "description": "32-inch monitor with color accuracy for frontend and graphics work.",
+      "price": "579.00",
+      "created_at": "2026-02-19T10:06:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+      "category": 2,
+      "name": "CodePanel 24",
+      "description": "Affordable 24-inch display for dual-monitor developer setups.",
+      "price": "199.00",
+      "created_at": "2026-02-19T10:07:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+
+  {
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+      "category": 3,
+      "name": "MechKeys 75",
+      "description": "75 percent mechanical keyboard with hot-swappable switches.",
+      "price": "149.00",
+      "created_at": "2026-02-19T10:08:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "category": 3,
+      "name": "SilentType TKL",
+      "description": "Tenkeyless keyboard with silent switches for office coding.",
+      "price": "129.00",
+      "created_at": "2026-02-19T10:09:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 11,
+    "fields": {
+      "category": 3,
+      "name": "Precision Mouse Pro",
+      "description": "Programmable mouse with gesture support for productivity.",
+      "price": "89.00",
+      "created_at": "2026-02-19T10:10:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 12,
+    "fields": {
+      "category": 3,
+      "name": "ErgoTrack Plus",
+      "description": "Ergonomic trackball mouse for long coding sessions.",
+      "price": "79.00",
+      "created_at": "2026-02-19T10:11:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+
+  {
+    "model": "store.product",
+    "pk": 13,
+    "fields": {
+      "category": 4,
+      "name": "NVMe SSD 1TB Gen4",
+      "description": "Fast SSD for projects, Docker images, and local databases.",
+      "price": "119.00",
+      "created_at": "2026-02-19T10:12:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 14,
+    "fields": {
+      "category": 4,
+      "name": "NVMe SSD 2TB Gen4",
+      "description": "High-capacity SSD for virtual machines and media assets.",
+      "price": "209.00",
+      "created_at": "2026-02-19T10:13:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 15,
+    "fields": {
+      "category": 4,
+      "name": "DDR5 RAM Kit 32GB",
+      "description": "32GB memory kit to speed up local development environments.",
+      "price": "149.00",
+      "created_at": "2026-02-19T10:14:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 16,
+    "fields": {
+      "category": 4,
+      "name": "DDR5 RAM Kit 64GB",
+      "description": "64GB memory kit for intensive backend and data tasks.",
+      "price": "279.00",
+      "created_at": "2026-02-19T10:15:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+
+  {
+    "model": "store.product",
+    "pk": 17,
+    "fields": {
+      "category": 5,
+      "name": "Wi-Fi 6E Router",
+      "description": "Low-latency router for remote development and video calls.",
+      "price": "249.00",
+      "created_at": "2026-02-19T10:16:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 18,
+    "fields": {
+      "category": 5,
+      "name": "USB-C Dock 12-in-1",
+      "description": "Dock with multiple ports for laptop-based developer desks.",
+      "price": "159.00",
+      "created_at": "2026-02-19T10:17:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 19,
+    "fields": {
+      "category": 5,
+      "name": "Webcam 4K Pro",
+      "description": "4K webcam for code reviews, standups, and demos.",
+      "price": "129.00",
+      "created_at": "2026-02-19T10:18:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 20,
+    "fields": {
+      "category": 5,
+      "name": "NoiseCancel Headset",
+      "description": "Comfort headset with clear mic for all-day meetings.",
+      "price": "179.00",
+      "created_at": "2026-02-19T10:19:00Z",
+      "image": "products/catalog-placeholder.webp"
+    }
+  }
+]

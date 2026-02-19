@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-About me
+About
 {% endblock %}
 
 {% load static %}
@@ -11,47 +11,39 @@ About me
 
 
 {% block content %}
-<div class="about">
-    <h3>About me</h3>
-    <h1>Sergio Inzunza</h1>
-
-    <div class="services">
-
-        <h3>Our Services</h3>
-
-        <div class="row">
-
-            <div class="service col-12 col-xl-3">
-                A
-            </div>
-
-            <div class="service col-12 col-xl-6">
-                B
-            </div>
-
-            <div class="service col-12 col-xl-3">
-                C
-            </div>
-
+<div class="container about">
+    <div class="row align-items-center g-4 mb-4">
+        <div class="col-12 col-lg-7 intro">
+            <h1 class="page-title">About Notespace</h1>
+            <p class="page-subtitle">A simple space to keep ideas and research organized, built with focus on clarity and speed.</p>
         </div>
-
-        <div class="row">
-
-            <div class="service col-12 col-xl-3">
-                X
+        <div class="col-12 col-lg-5">
+            <div class="section-soft">
+                <h5 class="mb-2">Built by Sergio Inzunza</h5>
+                <p class="mb-0 text-muted">A focused note workflow with clean UI, smart organization, and fast access to your writing.</p>
             </div>
-
-            <div class="service col-12 col-xl-6">
-                Y
-            </div>
-
-            <div class="service col-12 col-xl-3">
-                Z
-            </div>
-
         </div>
     </div>
 
-
+    <div class="row g-3">
+        <div class="col-12 col-lg-4">
+            <div class="service-card">
+                <h5>Capture</h5>
+                <p>Log thoughts in seconds with structured posts and rich content.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="service-card">
+                <h5>Organize</h5>
+                <p>Group ideas by topic and keep your notes searchable and tidy.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="service-card">
+                <h5>Share</h5>
+                <p>Publish insights with clean formatting and simple visuals.</p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

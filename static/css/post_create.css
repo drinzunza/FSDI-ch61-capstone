@@ -1,0 +1,20 @@
+.post-create {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.post-create .section-title {
+  font-weight: 700;
+}
+
+.post-create .section-subtitle {
+  color: #6b7280;
+}
+
+.post-create .form-card {
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}

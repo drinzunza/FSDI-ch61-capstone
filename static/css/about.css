@@ -1,0 +1,34 @@
+.about {
+  padding: 1rem 0;
+}
+
+.about .intro {
+  max-width: 720px;
+}
+
+.about .intro h1 {
+  font-weight: 700;
+}
+
+.about .intro p {
+  color: #6b7280;
+}
+
+.about .service-card {
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.06);
+}
+
+.about .service-card h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.about .service-card p {
+  color: #6b7280;
+  margin: 0;
+}

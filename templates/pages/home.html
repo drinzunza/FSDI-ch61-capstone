@@ -15,20 +15,37 @@ Home page
     <div class="home-container">
         <div class="home-hero">
             <div class="home-hero-left">
+                <span class="hero-pill"><i class="fa-regular fa-star me-2"></i>Stay focused, stay organized</span>
                 <h1 class="home-title">Capture ideas. Organize thoughts. Find notes fast.</h1>
                 <p class="home-subtitle">A clean, focused note-taking app to save ideas, tasks, and research — all in
                     one place.</p>
                 <div class="home-cta">
-                    <a href="{% url 'home' %}" class="btn btn-primary btn-lg">
+                    <a href="{% url 'post_create' %}" class="btn btn-primary btn-lg">
                         <i class="fa-solid fa-plus me-2"></i>Create a post
                     </a>
-                    <a href="{% url 'about' %}" class="btn btn-outline-secondary btn-lg">
+                    <a href="{% url 'about' %}" class="btn btn-more btn-outline-primary btn-lg">
                         <i class="fa-solid fa-circle-info me-2"></i>Learn more
                     </a>
                 </div>
+                <div class="hero-metrics">
+                    <div>
+                        <h4>3 min</h4>
+                        <p>Average capture time</p>
+                    </div>
+                    <div>
+                        <h4>24/7</h4>
+                        <p>Access from anywhere</p>
+                    </div>
+                    <div>
+                        <h4>100%</h4>
+                        <p>Clean, focused UI</p>
+                    </div>
+                </div>
             </div>
             <div class="home-hero-right">
-                <img class="top-img" src="{% static 'imgs/who.jpg' %}" alt="Notes app illustration">
+                <div class="hero-image-card">
+                    <img class="top-img" src="{% static 'imgs/who.jpg' %}" alt="Notes app illustration">
+                </div>
             </div>
         </div>
 
@@ -45,6 +62,17 @@ Home page
                     </div>
                     <p class="feature-text">Open and jot. Add checklists, ideas, or links in seconds without
                         distractions.</p>
+                </div>
+            </article>
+            <article class="feature-card feature-card-accent">
+                <div class="feature-card-body">
+                    <div class="feature-header">
+                        <div class="feature-icon feature-icon-info">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h5 class="feature-title">Project ready</h5>
+                    </div>
+                    <p class="feature-text">Track topics, ideas, and assets in a clean, easy-to-scan layout.</p>
                 </div>
             </article>
             <article class="feature-card">

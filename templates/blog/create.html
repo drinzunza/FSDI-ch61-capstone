@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static%}
+{% load django_bootstrap5 %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/post_create.css' %}">
+{% endblock%}
+
+{% block title %}
+  Create Post
+{% endblock %}
+
+{% block content %}
+  <div class="container post-create">
+    <div class="mb-4">
+      <h1 class="section-title">Create new post</h1>
+      <p class="section-subtitle">Share an idea, update, or project note.</p>
+    </div>
+
+    <div class="form-card">
+      <form method="post" action="{% url 'post_create' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-primary px-4">Create Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

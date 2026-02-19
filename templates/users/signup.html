@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static%}
+{% load django_bootstrap5 %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/users.css' %}">
+{% endblock%}
+
+{% block title %}
+  Create an account
+{% endblock %}
+
+{% block content %}
+  <div class="container auth-wrap">
+    <div class="auth-card">
+      <h1>Create an account</h1>
+      <p class="helper-text">Start capturing ideas and organizing your notes.</p>
+
+      <form method="post">
+          {% csrf_token %}
+
+          {% bootstrap_form form %}
+
+          <div class="auth-actions">
+            <button class="btn btn-primary px-4">Register</button>
+            <a class="link-muted" href="{% url 'login' %}">Already have an account?</a>
+          </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

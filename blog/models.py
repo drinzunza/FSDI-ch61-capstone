@@ -9,8 +9,8 @@ class Category(models.Model):
 
 # Create your models here.
 class Post(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=2) # REMOVE default
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=2) # REMOVE default
     title = models.CharField(max_length=200)
     content = models.TextField()
     image = models.ImageField(upload_to="posts/")
