@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.conf import settings
+from django.core.mail import send_mail
 from django.contrib.auth.models import User
 from django.views.generic import CreateView
 from django.contrib.auth.views import LoginView, LogoutView
@@ -18,6 +20,21 @@ class SignupView(CreateView):
         text = form.cleaned_data["password"]
         user.set_password(text) # <- will hash the text
         user.save()
+
+        if user.email:
+            send_mail(
+                subject="Welcome to Notespace",
+                message=(
+                    f"Hi {user.first_name or user.username},\n\n"
+                    "Welcome to Notespace! You're all set to capture ideas, organize notes, and share updates.\n\n"
+                    "If you have any questions, just reply to this email.\n\n"
+                    "Thanks,\n"
+                    "The Notespace Team"
+                ),
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[user.email],
+                fail_silently=True,
+            )
 
         return super().form_valid(form)
     
