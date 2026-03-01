@@ -4,67 +4,81 @@
 {% load django_bootstrap5 %}
 
 {% block css %}
-  <link rel="stylesheet" href="{% static 'css/post_details.css' %}">
+<link rel="stylesheet" href="{% static 'css/post_details.css' %}">
 {% endblock %}
 
 {% block title %}
-  Post details
+Post details
 {% endblock %}
 
 {% block content %}
-  <section class="container post-details">
-    <div class="post-hero">
-      <div class="text-center">
-        {% if post.image %}
-          <img class="post-image mb-4" src="{{post.image.url}}" alt="{{ post.title }}">
-        {% endif %}
-      </div>
-
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-3">
-        <div>
-          <h1 class="page-title mb-2">{{post.title}}</h1>
-          <p class="post-meta mb-0">Published {{post.created_on}}</p>
-        </div>
-        <a class="btn btn-outline-primary" href="{% url 'post_list' %}">Back to posts</a>
-      </div>
-
-      <p class="mb-0">{{post.content}}</p>
+<section class="container post-details">
+  <div class="post-hero">
+    <div class="text-center">
+      {% if post.image %}
+      <img class="post-image mb-4" src="{{post.image.url}}" alt="{{ post.title }}">
+      {% endif %}
     </div>
 
-    <div class="row g-4 mt-4">
-      <div class="col-12 col-lg-7">
-        <div class="d-flex align-items-center justify-content-between mb-3">
-          <h4 class="mb-0">Comments</h4>
-          <span class="text-muted">{{ comments|length }} total</span>
-        </div>
+    <div class="d-flex flex-column flex-md-row align-items-md-center gap-2 mb-3">
+      <div class="like-container">
+        <form method="POST" action="{% url 'like_post' %}">
+          {% csrf_token %}
+          <input type="hidden" name="post_id" value="{{post.id}}">
+          <button type="submit">
+            {% if linked_by_me %}
+            <i class="fa-solid fa-thumbs-up iBlue"></i>
+            {% else %}
+            <i class="fa-regular fa-thumbs-up iGray"></i>
+            {% endif %}
+          </button>
+        </form>
+        <label>{{post.likes}} likes</label>
+      </div>
+      <div style="flex:1;">
+        <h1 class="page-title mb-2">{{post.title}}</h1>
+        <p class="post-meta mb-0">Published {{post.created_on}}</p>
+      </div>
+      <a class="btn btn-outline-primary" href="{% url 'post_list' %}">Back to posts</a>
+    </div>
 
-        {% if comments %}
-          {% for comment in comments %}
-            <div class="comment-card">
-              <div class="d-flex justify-content-between align-items-start mb-2">
-                <strong>{{ comment.author.username|default:"Guest" }}</strong>
-                <span class="comment-meta">{{ comment.created_on|date:"M d, Y H:i" }}</span>
-              </div>
-              <p class="mb-0">{{ comment.content }}</p>
-            </div>
-          {% endfor %}
-        {% else %}
-          <div class="section-soft">
-            <p class="mb-0 text-muted">No comments yet. Be the first to add one.</p>
-          </div>
-        {% endif %}
+    <p class="mb-0">{{post.content}}</p>
+  </div>
+
+  <div class="row g-4 mt-4">
+    <div class="col-12 col-lg-7">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h4 class="mb-0">Comments</h4>
+        <span class="text-muted">{{ comments|length }} total</span>
       </div>
 
-      <div class="col-12 col-lg-5">
-        <div class="comment-form">
-          <h4 class="mb-3">Add a comment</h4>
-          <form method="post">
-            {% csrf_token %}
-            {% bootstrap_form comment_form %}
-            <button class="btn btn-primary w-100">Post comment</button>
-          </form>
+      {% if comments %}
+      {% for comment in comments %}
+      <div class="comment-card">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <strong>{{ comment.author.username|default:"Guest" }}</strong>
+          <span class="comment-meta">{{ comment.created_on|date:"M d, Y H:i" }}</span>
         </div>
+        <p class="mb-0">{{ comment.content }}</p>
+      </div>
+      {% endfor %}
+      {% else %}
+      <div class="section-soft">
+        <p class="mb-0 text-muted">No comments yet. Be the first to add one.</p>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="col-12 col-lg-5">
+      <div class="comment-form">
+        <h4 class="mb-3">Add a comment</h4>
+        <form method="post">
+          {% csrf_token %}
+          {% bootstrap_form comment_form %}
+          <button class="btn btn-primary w-100">Post comment</button>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {% endblock %}

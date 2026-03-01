@@ -3,6 +3,7 @@ from django.views.generic import ListView, CreateView, DetailView
 from django.urls import reverse_lazy
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
+from django.contrib.auth.decorators import login_required
 
 """
 Class-based views:
@@ -42,6 +43,14 @@ class PostDetail(DetailView):
         context = super().get_context_data(**kwargs)
         context["comment_form"] = CommentForm()
         context["comments"] = self.object.comments.select_related("author").order_by("-created_on")
+
+        # liked by me
+        user = self.request.user
+        if user.is_authenticated:
+            context["linked_by_me"] = self.object.liked_by.filter(id=user.id)
+        else:
+            context["linked_by_me"] = False
+
         return context
 
     def post(self, request, *args, **kwargs):
@@ -58,3 +67,21 @@ class PostDetail(DetailView):
         context["comment_form"] = form
         return self.render_to_response(context)
 
+
+
+@login_required
+def toggle_like(request):
+    post_id = int(request.POST.get("post_id"))
+    user = request.user
+
+    # get the post
+    post = Post.objects.get(id=post_id)
+    if post.liked_by.filter(id=user.id).exists():
+        # remove the like
+        post.liked_by.remove(user)
+    else:
+        # add the like
+        post.liked_by.add(user)
+
+    return redirect("post_details", post_id)
+    

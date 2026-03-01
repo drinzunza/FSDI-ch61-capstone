@@ -15,10 +15,14 @@ class Post(models.Model):
     content = models.TextField()
     image = models.ImageField(upload_to="posts/")
     created_on = models.DateField(auto_now_add=True)
-    likes = models.IntegerField(default=0)
+    liked_by = models.ManyToManyField(User, blank=True, related_name="liked_posts")
 
     def __str__(self):
         return f"{self.title} - {self.user}"
+
+    @property
+    def likes(self):
+        return self.liked_by.count()
 
 
 class Comment(models.Model):

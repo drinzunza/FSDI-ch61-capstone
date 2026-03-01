@@ -6,6 +6,11 @@
   box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
 }
 
+.post-details h1 {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .post-details .post-image {
   width: 100%;
   max-height: 420px;
@@ -42,4 +47,37 @@
   border-radius: 18px;
   padding: 1.5rem;
   box-shadow: 0 14px 24px rgba(15, 23, 42, 0.08);
+}
+
+
+.post-details .like-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 12px;
+  border: 1px solid #64748b;
+  border-radius: 4px;
+  background: #f5fcff;
+}
+
+.post-details .like-container button {
+  border: none;
+  background: inherit;
+}
+
+.post-details .like-container i {
+ font-size: 30px;
+ cursor: pointer;
+} 
+
+.post-details .like-container i:hover {
+  color:darkblue;
+}
+
+.post-details .like-container .iGray {
+  color:#64748b;
+}
+
+.post-details .like-container .iBlue {
+  color:darkblue;
 }
