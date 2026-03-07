@@ -1,0 +1,52 @@
+nav {
+  width: 100%;
+  margin: 0;
+  padding: 5px 20px;
+  background-color: #b4c2ce;
+}
+
+nav .items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav .items li {
+  margin-left: 10px;
+  padding: 10px 5px 0 5px;
+}
+
+nav .items li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav .items li a:hover {
+  text-decoration: underline;
+  color: tomato;
+}
+
+nav .end {
+  margin-left: auto !important;
+  padding: 0 !important;
+}
+
+nav .user-info {
+  display: inline-block;
+  border: 1px solid #3f5266;
+  border-radius: 4px;
+  color:#3f5266;
+  font-weight: 500;
+  padding: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+nav .user-info:hover {
+  border-color: black;
+  color: black;
+}
+
+nav .login-btn {
+  color: #215be4 !important;
+}

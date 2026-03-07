@@ -1,0 +1,23 @@
+.contact {
+  padding: 1rem 0;
+}
+
+.contact-card {
+  max-width: 680px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 18px 28px rgba(15, 23, 42, 0.08);
+}
+
+.contact-card h3 {
+  font-weight: 700;
+}
+
+.contact-card h5 {
+  color: #6b7280;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}

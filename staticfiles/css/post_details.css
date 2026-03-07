@@ -1,0 +1,83 @@
+.post-details .post-hero {
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+}
+
+.post-details h1 {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.post-details .post-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 14px 22px rgba(15, 23, 42, 0.12);
+}
+
+.post-details .post-meta {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.post-details .comment-card {
+  border: 1px solid #e6e9ef;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.06);
+}
+
+.post-details .comment-card + .comment-card {
+  margin-top: 1rem;
+}
+
+.post-details .comment-meta {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.post-details .comment-form {
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.08);
+}
+
+
+.post-details .like-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 12px;
+  border: 1px solid #64748b;
+  border-radius: 4px;
+  background: #f5fcff;
+}
+
+.post-details .like-container button {
+  border: none;
+  background: inherit;
+}
+
+.post-details .like-container i {
+ font-size: 30px;
+ cursor: pointer;
+} 
+
+.post-details .like-container i:hover {
+  color:darkblue;
+}
+
+.post-details .like-container .iGray {
+  color:#64748b;
+}
+
+.post-details .like-container .iBlue {
+  color:darkblue;
+}

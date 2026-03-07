@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  border: 2px solid #ccc;
+  padding: 20px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+
+  /* to style the text inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.box1 {
+  background-color: tomato;
+}
+
+.box2 {
+  background-color: #3bbb7f;
+}
+
+.box3 {
+  background-color: #11519b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+thead {
+  background-color: #3c5975;
+  color: white;
+}
+
+caption {
+  caption-side: top;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
