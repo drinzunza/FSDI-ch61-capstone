@@ -18,12 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
-from django.conf import settings
-from django.conf.urls.static import static
+from config.views import health
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('health', health, name='health'),
+    path('health/', health, name='health-slash'),
 
     path('blog/', include('blog.urls')),
     path('store/', include('store.urls')),
